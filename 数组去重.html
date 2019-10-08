@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr=[1,2,3,5,5,6,6,7];
+    var emport=[],res=[],json={};
+    for(var i=0;i<arr.length;i++){
+        //数组的方法，字符串的方法，某个字符值在字符窜的位置,如果不存在就存进新的空数组中，一一的检查
+        if(emport.indexOf(arr[i])==-1){
+            emport.push(arr[i])
+        }
+    }
+    console.log(emport)
+    // 还要利用属性只有一个的特点，循环，给每个属性给个值，如果有值了，就不存进去
+    for(var j=0;j<arr.length;j++){
+        if(!json[arr[j]]){
+            res.push(arr[j]);
+            json[arr[j]]=1;
+        }
+    }
+    console.log(res)
+
+</script>
+
+</body>
+</html>
